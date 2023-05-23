@@ -41,8 +41,8 @@ class RewardDataLoader(object):
             "input_ids_k": [],
             "attention_mask_k": [],
         }
-        for question, response_j, response_k in zip(examples["question"], examples["response_j"], examples["response_k"]):
-        #for question, response_j, response_k in zip(examples["user_input"], examples["completion_a"], examples["completion_b"]):
+        #for question, response_j, response_k in zip(examples["question"], examples["response_j"], examples["response_k"]):
+        for question, response_j, response_k in zip(examples["user_input"], examples["completion_a"], examples["completion_b"]):
             tokenized_j = self.tokenizer(
                 "Question: " + question + "\n\nAnswer: " + response_j, truncation=True)
             tokenized_k = self.tokenizer(
