@@ -110,6 +110,9 @@ print("model_name_split: ", model_name_split)
 output_name = (
     f"reward_model_{model_name_split}_{script_args.train_subset}_{script_args.learning_rate}"
 )
+print()
+print("output_name" + output_name)
+print()
 
 
 
