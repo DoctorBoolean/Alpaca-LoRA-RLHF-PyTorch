@@ -302,3 +302,5 @@ for epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
 
     if script_args.save_freq and epoch and epoch % script_args.save_freq == 0:
         ppo_trainer.save_pretrained(script_args.output_dir + f"step_{epoch}")
+       
+model.push_to_hub("theoer/rlhf_model", use_auth_token=True)
