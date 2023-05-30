@@ -208,7 +208,7 @@ model = AutoModelForCausalLMWithValueHead.from_pretrained(
     device_map={"": current_device},
     # device_map="auto",
     peft_config=lora_config,
-    layer_norm_names=[],
+    #layer_norm_names=[],
     # torch_dtype=torch.float16,
 )
 
