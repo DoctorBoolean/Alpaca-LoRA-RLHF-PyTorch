@@ -311,4 +311,4 @@ trainer.train(script_args.resume_from_checkpoint)
 
 print("Saving last checkpoint of the model")
 # model.save_pretrained(output_name + "_peft_last_checkpoint")
-model.save_pretrained(output_name)
+model.push_to_hub("theoer/reward_model", use_auth_token=True)
